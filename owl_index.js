@@ -1,97 +1,319 @@
-const [a, b, c, d, e, f] = [
+const main = [
   "Learning",
   "Introspection",
   "Environment",
   "Behavior",
   "Nature",
-  "Inanimate",
+  "Mechanical",
 ];
+
+const categories = {
+  Learning: [
+    "book notes", // 0
+    "writing", // 1
+    "conditioning the mind", // 2
+    "history", // 3
+    "study habits", // 4
+    "music", // 5
+    "developing a skill", // 6
+    "romantic period", // 7
+  ],
+  Introspection: [
+    "perspective", // 0
+    "image of ourselves", // 1
+    "derams", // 2
+    "ideas", // 3
+    "creative perspective", // 4
+    "motivation", // 5
+    "stress", // 6
+    "joy", // 7
+    "imagination", // 8
+    "the blues", // 9
+    "spirituality", // 10
+  ],
+  Environment: [
+    "government", // 0
+    "society", // 1
+    "media", // 2
+    "internet", // 3
+    "habits and routines", // 4
+    "deception of desire", // 5
+    "isreal", // 6
+  ],
+  Behavior: [
+    "watching television", // 0
+    "healthy behavior", // 1
+    "unhealthy behavior", // 2
+    "expression", // 3
+    "becoming angry", // 4
+    "steps of the journey", // 5
+    "sacrifice", // 6
+    "travelling and exploration", // 7
+    "observation and description", // 8
+    "bravery and courage", // 9
+    "self justification", // 10
+  ],
+  Nature: [
+    "adaptation and evolution", // 0
+    "physical body", // 1
+    "birds", // 2
+    "physical forces", // 3
+    "river", // 4
+    "natures example", // 5
+    "beauty of nature", // 6
+  ],
+  Mechanical: [
+    "transportation", // 0
+    "logic gates", // 1
+    "wear and tear", // 2
+    "deconstruction", // 3
+    "build", // 4
+  ],
+  printCategories(page) {
+    const pickles = [];
+    for (const item of main) {
+      const bread = eval(`owl_index.${page}.cat.${item}`);
+      const noodles = eval(`categories.${item}`);
+      const vegies = [];
+      for (const num of bread) {
+        vegies.push(noodles[num]);
+      }
+      pickles.push(...vegies);
+    }
+    console.log(`Page ${page} has categories of ${pickles.join(" and ")}`);
+  },
+};
+
 const owl_index = {
   p1: {
     i1: "Quotes; I felt this evening, in the course of a solitary walk in the most beautiful weather",
     cat: {
-      a: ["writing"],
-      b: ["euphoria"],
-      c: ["internet"],
-      d: ["progression"],
+      Learning: [0, 1],
+      Introspection: [7],
+      Environment: [],
+      Behavior: [9, 5],
+      Nature: [6],
+      Mechanical: [3],
+      Date: false,
     },
   },
   p2: {
     i1: "If they so wish to speak to me then let them make the effort to come to where I am.",
     i2: "I so dispise the everlasting tactics of envious routine against growing talent.",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p3: {
     i1: "[7.28.11] I can never tell whether I am being incredibly lazy or just giving myself a break.",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p4: {
     i1: "Whether we allow it to control us or if we choose to perform the necessary work to understand how it works… ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
-  p5: { i1: "Soon I will be going on an adventure to an alien world." },
+  p5: {
+    i1: "Soon I will be going on an adventure to an alien world.",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
+  },
+
   p6: {
     i1: "I am filled with great enthusiasm when I read about the triumph of 'Hernani' ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p7: {
     i1: "So many things are just discarded by our society and pass… ",
     i2: "Some Other things were written too. ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p8: {
     i1: "Probably the greatest human invention of the wheel, the beginning of commerce.",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p9: {
     i1: "Did she ask me to teach her how to play the cello because she wanted to have sex with me? ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
-  p10: { i1: "Notes from “maldoror” by Lautreamont" },
+  p10: {
+    i1: "Notes from “maldoror” by Lautreamont",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
+  },
   p11: {
     i1: "Imagine if you anticipated being reincarnated 150yrs from now and you wanted to leave a hint for yourself. ",
     i2: "Some Other things were Written too. ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p12: {
     i1: "The essence is captured in the image of a train, a steam locomotive… ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p13: {
     i1: "The steam creates a magical atmosphere as if the magician just caused… ",
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p14: {
     i1: "A clean window means one of two things either humans rarely come in contact with it or… ",
     i2: "Just step inside, shut the door, and hit the forward button..",
     i3: "Emotions were created to facilitate communication and language.",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
-  p15: { i1: "Life is partially taking risks until you die." },
+  p15: {
+    i1: "Life is partially taking risks until you die.",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+  },
   p16: {
     i1: "If Israel believed truly what the bible teaches then they would gladly give their state… ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
-  p17: { i1: "Huge truck pulling an enclosed car trailer semis, suv, cars… " },
+  p17: {
+    i1: "Huge truck pulling an enclosed car trailer semis, suv, cars… ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+  },
   p18: {
     i1: "Unnatural rest stops, oil barrels, train tracks, strange objects… ",
     i2: "Wyoming, barron rolling hills...",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
   p19: {
     i1: "Weak wrists. Joints take all the stress. less moving parts means less things to fix.",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
   p20: {
     i1: "The television promotes sports so people who watch tv are passionate about sports. ",
     i2: "Notes from 'Evil Eye' by Hakim Bey ",
     i3: "Sometimes I look upon couples with indignation...",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
   p21: {
     i1: "All the things that populate the hyway environment in order to ensure people's safety. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
   p22: {
     i1: "I look toward the horizon and whatever i wish to see is drawn there. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
   p23: {
     i1: "What do the CO-OPs Symbolize? All old but still standing tall out on the plains. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
-  p24: { i1: "Study the Preface to Cromwell in order to define the drama. " },
+  p24: {
+    i1: "Study the Preface to Cromwell in order to define the drama. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+  },
   p25: {
     i1: "Constantly they peel forth. It is all I can do to ignore them and continue the swift motion of my arms. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
-  p26: { i1: "How do I overcome my social anxiety? " },
+  p26: {
+    i1: "How do I overcome my social anxiety? ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+  },
   p27: {
     i1: "Unable to make the connection. Both halves are placed near one another but the reaction that was meant to happen never does. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
   },
-  p28: { i1: "That defines the challenge that I am faced with. " },
-  p29: { i1: "That’s nothing, just wait til you see the big picture. " },
+  p28: {
+    i1: "That defines the challenge that I am faced with. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+  },
+  p29: {
+    i1: "That’s nothing, just wait til you see the big picture. ",
+    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+  },
   p30: {
     i1: "Man is equally incapable of seeing the nothingness from which he emerges and the infinity in which he is engulfed- Blaise Pascal ",
   },
@@ -357,3 +579,5 @@ function createNode(pagenum) {
     pagenum++;
   }
 }
+
+categories.printCategories("p1");
