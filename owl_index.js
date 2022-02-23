@@ -84,6 +84,7 @@ const categories = {
     const date = eval(`owl_index.${page}.cat['Date']`);
     if (date) console.log("Page is dated");
   },
+  commonPages(category) {},
 };
 
 const owl_index = {
