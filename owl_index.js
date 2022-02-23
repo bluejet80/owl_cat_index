@@ -80,7 +80,9 @@ const categories = {
       }
       pickles.push(...vegies);
     }
-    console.log(`Page ${page} has categories of ${pickles.join(" and ")}`);
+    console.log(`Page ${page} has categories of ${pickles.join("\n and ")}`);
+    const date = eval(`owl_index.${page}.cat['Date']`);
+    if (date) console.log("Page is dated");
   },
 };
 
@@ -101,10 +103,10 @@ const owl_index = {
     i1: "If they so wish to speak to me then let them make the effort to come to where I am.",
     i2: "I so dispise the everlasting tactics of envious routine against growing talent.",
     cat: {
-      Learning: [],
-      Introspection: [],
+      Learning: [0],
+      Introspection: [0],
       Environment: [],
-      Behavior: [],
+      Behavior: [5, 2],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -113,22 +115,22 @@ const owl_index = {
   p3: {
     i1: "[7.28.11] I can never tell whether I am being incredibly lazy or just giving myself a break.",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
+      Learning: [3],
+      Introspection: [5, 6],
+      Environment: [1],
       Behavior: [],
       Nature: [],
       Mechanical: [],
-      Date: false,
+      Date: true,
     },
   },
   p4: {
     i1: "Whether we allow it to control us or if we choose to perform the necessary work to understand how it works… ",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Learning: [2],
+      Introspection: [0],
+      Environment: [1, 5],
+      Behavior: [6],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -138,10 +140,10 @@ const owl_index = {
     i1: "Soon I will be going on an adventure to an alien world.",
     cat: {
       Learning: [],
-      Introspection: [],
+      Introspection: [0, 8],
       Environment: [],
-      Behavior: [],
-      Nature: [],
+      Behavior: [7, 1],
+      Nature: [5],
       Mechanical: [],
       Date: false,
     },
@@ -150,13 +152,13 @@ const owl_index = {
   p6: {
     i1: "I am filled with great enthusiasm when I read about the triumph of 'Hernani' ",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Learning: [3, 7, 1],
+      Introspection: [7],
+      Environment: [1],
+      Behavior: [9],
       Nature: [],
       Mechanical: [],
-      Date: false,
+      Date: true,
     },
   },
   p7: {
@@ -164,10 +166,10 @@ const owl_index = {
     i2: "Some Other things were written too. ",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
+      Introspection: [8, 6, 1],
+      Environment: [1],
+      Behavior: [10],
+      Nature: [1, 2],
       Mechanical: [],
       Date: false,
     },
@@ -249,19 +251,51 @@ const owl_index = {
     i1: "A clean window means one of two things either humans rarely come in contact with it or… ",
     i2: "Just step inside, shut the door, and hit the forward button..",
     i3: "Emotions were created to facilitate communication and language.",
-    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p15: {
     i1: "Life is partially taking risks until you die.",
-    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p16: {
     i1: "If Israel believed truly what the bible teaches then they would gladly give their state… ",
-    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p17: {
     i1: "Huge truck pulling an enclosed car trailer semis, suv, cars… ",
-    cat: [[], [], [], [], [], [], false], // learning, introspection, environment, behavior, nature, mechanical
+    cat: {
+      Learning: [],
+      Introspection: [],
+      Environment: [],
+      Behavior: [],
+      Nature: [],
+      Mechanical: [],
+      Date: false,
+    },
   },
   p18: {
     i1: "Unnatural rest stops, oil barrels, train tracks, strange objects… ",
@@ -580,4 +614,4 @@ function createNode(pagenum) {
   }
 }
 
-categories.printCategories("p1");
+categories.printCategories("p6");
