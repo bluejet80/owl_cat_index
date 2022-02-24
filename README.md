@@ -8,3 +8,5 @@ It also contains now the category designation of each page.
 The categories object contains the various categories as well as the methods that create the print, and search functionality. 
 
 Sometimes I name variables that dont matter random names. 
+
+function/method calls are at the very bottom of the file.
