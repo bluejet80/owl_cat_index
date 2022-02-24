@@ -84,7 +84,33 @@ const categories = {
     const date = eval(`owl_index.${page}.cat['Date']`);
     if (date) console.log("Page is dated");
   },
-  commonPages(category) {},
+  getCategories(page) {
+    const pickles = [];
+    for (const item of main) {
+      const bread = eval(`owl_index.${page}.cat?.${item}`);
+      const noodles = eval(`categories.${item}`);
+      const vegies = [];
+      if (bread === undefined) break;
+      for (const num of bread) {
+        vegies.push(noodles[num]);
+      }
+      pickles.push(...vegies);
+    }
+    return pickles;
+  },
+  searchPages(category) {
+    const resultPages = [];
+    const pages = Object.keys(owl_index); // array of pages
+    for (const item of pages) {
+      const pageCat = this.getCategories(item); // array of categories
+      for (const value of pageCat) {
+        if (category === value) {
+          resultPages.push(item);
+        }
+      }
+    }
+    return resultPages;
+  },
 };
 
 const owl_index = {
@@ -616,3 +642,5 @@ function createNode(pagenum) {
 }
 
 categories.printCategories("p6");
+const resultPages = categories.searchPages("history");
+console.log(...resultPages);
