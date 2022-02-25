@@ -17,11 +17,14 @@ const categories = {
     "music", // 5
     "developing a skill", // 6
     "romantic period", // 7
+    "philosophy", // 8
+    "education", // 9
+    "math", // 10
   ],
   Introspection: [
     "perspective", // 0
     "image of ourselves", // 1
-    "derams", // 2
+    "dreams", // 2
     "ideas", // 3
     "creative perspective", // 4
     "motivation", // 5
@@ -32,6 +35,9 @@ const categories = {
     "spirituality", // 10
     "distraction", // 11
     "advice", // 12
+    "subconscious", // 13
+    "dicipline", // 14
+    "experience", // 15
   ],
   Environment: [
     "government", // 0
@@ -43,6 +49,12 @@ const categories = {
     "isreal", // 6
     "relationships", // 7
     "dark", // 8
+    "freedom", // 9
+    "colorado", // 10
+    "sports", // 11
+    "safety", // 12
+    "wyoming", // 13
+    "liquor store", // 14
   ],
   Behavior: [
     "watching television", // 0
@@ -59,7 +71,12 @@ const categories = {
     "solitude", // 11
     "self presentation", // 12
     "conflict", // 13
-    "accomplishment",
+    "accomplishment", // 14
+    "destruction", // 15
+    "organization", // 16
+    "greed", // 17
+    "love", // 18
+    "struggle", // 19
   ],
   Nature: [
     "adaptation and evolution", // 0
@@ -69,6 +86,10 @@ const categories = {
     "river", // 4
     "natures example", // 5
     "beauty of nature", // 6
+    "death", // 7
+    "countryside", // 8
+    "the mind", // 9
+    "trees", // 10
   ],
   Mechanical: [
     "transportation", // 0
@@ -78,6 +99,8 @@ const categories = {
     "build", // 4
     "defense mechanism", // 5
     "time", // 6
+    "trains", // 7
+    "cars", // 8
   ],
   printCategories(page) {
     const pickles = [];
@@ -257,14 +280,14 @@ const owl_index = {
   },
   p11: {
     i1: "Imagine if you anticipated being reincarnated 150yrs from now and you wanted to leave a hint for yourself. ",
-    i2: "Some Other things were Written too. ",
+    i2: "All philosophy leads to the realization that nothing matters.",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
-      Mechanical: [],
+      Learning: [8],
+      Introspection: [5, 8],
+      Environment: [5],
+      Behavior: [3],
+      Nature: [5],
+      Mechanical: [6],
       Date: false,
     },
   },
@@ -272,11 +295,11 @@ const owl_index = {
     i1: "The essence is captured in the image of a train, a steam locomotive… ",
     cat: {
       Learning: [],
-      Introspection: [],
+      Introspection: [4],
       Environment: [],
-      Behavior: [],
-      Nature: [],
-      Mechanical: [],
+      Behavior: [8],
+      Nature: [3],
+      Mechanical: [7],
       Date: false,
     },
   },
@@ -284,11 +307,11 @@ const owl_index = {
     i1: "The steam creates a magical atmosphere as if the magician just caused… ",
     cat: {
       Learning: [],
-      Introspection: [],
+      Introspection: [4],
       Environment: [],
-      Behavior: [],
-      Nature: [],
-      Mechanical: [],
+      Behavior: [8],
+      Nature: [3],
+      Mechanical: [7],
       Date: false,
     },
   },
@@ -297,34 +320,38 @@ const owl_index = {
     i2: "Just step inside, shut the door, and hit the forward button..",
     i3: "Emotions were created to facilitate communication and language.",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
-      Mechanical: [],
+      Learning: [1],
+      Introspection: [8, 13],
+      Environment: [1, 9],
+      Behavior: [15],
+      Nature: [5],
+      Mechanical: [2],
       Date: false,
     },
   },
   p15: {
     i1: "Life is partially taking risks until you die.",
+    i2: "Take those shitty car parts..",
+    i3: "The pieces seem to be falling into place",
+    i4: "A dictatorship is required",
     cat: {
       Learning: [],
-      Introspection: [],
+      Introspection: [14],
       Environment: [],
-      Behavior: [],
-      Nature: [],
-      Mechanical: [],
+      Behavior: [16],
+      Nature: [7],
+      Mechanical: [8],
       Date: false,
     },
   },
   p16: {
     i1: "If Israel believed truly what the bible teaches then they would gladly give their state… ",
+    i2: "You have to be the ugliest person ive ever met...",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Introspection: [10, 4],
+      Environment: [6],
+      Behavior: [6, 17],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -334,11 +361,11 @@ const owl_index = {
     i1: "Huge truck pulling an enclosed car trailer semis, suv, cars… ",
     cat: {
       Learning: [],
-      Introspection: [],
+      Introspection: [8],
       Environment: [],
-      Behavior: [],
+      Behavior: [8, 7],
       Nature: [],
-      Mechanical: [],
+      Mechanical: [8],
       Date: false,
     },
   },
@@ -347,10 +374,10 @@ const owl_index = {
     i2: "Wyoming, barron rolling hills...",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
+      Introspection: [4, 8],
+      Environment: [10],
+      Behavior: [7, 8],
+      Nature: [8],
       Mechanical: [],
       Date: false,
     },
@@ -358,12 +385,12 @@ const owl_index = {
   p19: {
     i1: "Weak wrists. Joints take all the stress. less moving parts means less things to fix.",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
+      Learning: [9, 10, 1],
+      Introspection: [6, 2, 3],
+      Environment: [1],
       Behavior: [],
       Nature: [],
-      Mechanical: [],
+      Mechanical: [2, 8],
       Date: false,
     },
   },
@@ -372,35 +399,39 @@ const owl_index = {
     i2: "Notes from 'Evil Eye' by Hakim Bey ",
     i3: "Sometimes I look upon couples with indignation...",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
+      Learning: [0],
+      Introspection: [8, 11],
+      Environment: [11, 7, 9],
+      Behavior: [0, 18],
+      Nature: [1],
       Mechanical: [],
       Date: false,
     },
   },
   p21: {
     i1: "All the things that populate the hyway environment in order to ensure people's safety. ",
+    i2: "In some ways I am particularly intersted in the young mind.",
+    i3: "Life has a tendency to cause large channels of thought to be carved in the mind",
+    i4: "Its 4am Im going 75 down the hyway dodging semis",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
+      Introspection: [15],
+      Environment: [12, 1],
+      Behavior: [7, 8, 5],
+      Nature: [9],
       Mechanical: [],
       Date: false,
     },
   },
   p22: {
     i1: "I look toward the horizon and whatever i wish to see is drawn there. ",
+    i2: "It was a nice view off Cemetary Road",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
+      Introspection: [8],
+      Environment: [13],
+      Behavior: [8, 7],
+      Nature: [6, 10],
       Mechanical: [],
       Date: false,
     },
@@ -408,10 +439,10 @@ const owl_index = {
   p23: {
     i1: "What do the CO-OPs Symbolize? All old but still standing tall out on the plains. ",
     cat: {
-      Learning: [],
+      Learning: [3],
       Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Environment: [9],
+      Behavior: [16],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -419,11 +450,13 @@ const owl_index = {
   },
   p24: {
     i1: "Study the Preface to Cromwell in order to define the drama. ",
+    i2: "Hopefully working at the Liquor Store will cause me to get fed up and say what needs to be said",
+    i3: "The drama that is my life, the last struggle.",
     cat: {
-      Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Learning: [3, 0, 7],
+      Introspection: [9, 13, 12],
+      Environment: [7],
+      Behavior: [3],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -432,10 +465,10 @@ const owl_index = {
   p25: {
     i1: "Constantly they peel forth. It is all I can do to ignore them and continue the swift motion of my arms. ",
     cat: {
-      Learning: [],
-      Introspection: [],
+      Learning: [3, 7],
+      Introspection: [6],
       Environment: [],
-      Behavior: [],
+      Behavior: [3],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -443,11 +476,13 @@ const owl_index = {
   },
   p26: {
     i1: "How do I overcome my social anxiety? ",
+    i2: "These obsessed people. Doing something unnatural for so long that it becomes natural.",
+    i3: "I will be like a tree and divide the drops of rain, so that you are not drowned by a single drop",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Introspection: [6, 11, 8, 4],
+      Environment: [1, 4],
+      Behavior: [13, 2],
       Nature: [],
       Mechanical: [],
       Date: false,
@@ -455,30 +490,34 @@ const owl_index = {
   },
   p27: {
     i1: "Unable to make the connection. Both halves are placed near one another but the reaction that was meant to happen never does. ",
+    i2: "The Strength of the Unseen enemy",
+    i3: "It seems to be some sort of accomplishment to wake up feeling like shit",
     cat: {
       Learning: [],
-      Introspection: [],
-      Environment: [],
-      Behavior: [],
+      Introspection: [6, 0],
+      Environment: [7, 1],
+      Behavior: [6],
       Nature: [],
       Mechanical: [],
       Date: false,
     },
   },
   p28: {
-    i1: "That defines the challenge that I am faced with. ",
+    i1: "That defines the challenge that I am faced with. Society tells people to relax and not work up a sweat. ",
+    i2: "Its so awesome that if you take a single moment in history, that it branches out in all directions",
+    i3: "Society as a person has been learning and evolving throughout time",
     cat: {
-      Learning: [],
+      Learning: [3],
       Introspection: [],
-      Environment: [],
-      Behavior: [],
-      Nature: [],
+      Environment: [1],
+      Behavior: [19, 5],
+      Nature: [0],
       Mechanical: [],
       Date: false,
     },
   },
   p29: {
-    i1: "That’s nothing, just wait til you see the big picture. ",
+    i1: "Thats nothing, just wait til you see the big picture. ",
     cat: {
       Learning: [],
       Introspection: [],
@@ -1604,6 +1643,6 @@ function createNode(pagenum) {
   }
 }
 
-categories.printCategories("p10");
-const resultPages = categories.searchPages("joy");
+categories.printCategories("p21");
+const resultPages = categories.searchPages("history");
 console.log(...resultPages);
