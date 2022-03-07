@@ -10,3 +10,6 @@ The categories object contains the various categories as well as the methods tha
 Sometimes I name variables that dont matter random names. 
 
 function/method calls are at the very bottom of the file.
+
+# Progress
+Currently I am working on categorizing the pages
